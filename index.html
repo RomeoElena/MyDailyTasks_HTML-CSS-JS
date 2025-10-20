@@ -9,7 +9,31 @@
 </head>
 
 <body>
-  <h1>Dayly Tasks!</h1>
+  <div class="container">
+    <h1>Tareas diarias 🌸</h1>
+
+
+    <h2>Tus tareas e ideas de una manera visual y organizada! </h2>
+    <p>
+      Hola! Mi nombre es
+      <a class="name-link" href="https://www.linkedin.com/in/elena-bragado-romeo/" target="_blank"
+        rel="noopener noreferrer">
+        Elena Bragado.
+      </a>
+    </p>
+    <p>Bienvenid@ a la lista personal de tareas.
+      Aquí puedes llevar el control de lo que más importa para ti hoy.</p>
+
+    <p>Puedes añadir una nueva tarea, editarla en cualquier momento o marcarla como completada cuando la termines.
+      Hagamos que todo fluya 🌸</p>
+
+    <form action="task" id="task">
+      <input type="text" required placeholder="Añadir tarea ...">
+      <button type="submit"> + </button>
+    </form>
+    <div id="task-list" class="task-list"></div>
+
+  </div>
 </body>
 
 </html>

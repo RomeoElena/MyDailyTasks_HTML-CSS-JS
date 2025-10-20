@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="technical assessment">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/*" href="public/favicon.png" />
   <title>Daily Tasks</title>
 </head>
 
@@ -15,26 +15,96 @@
 
 
     <h2>Tus tareas e ideas de una manera visual y organizada! </h2>
-    <p>
+    <p class="personal">
       Hola! Mi nombre es
       <a class="name-link" href="https://www.linkedin.com/in/elena-bragado-romeo/" target="_blank"
         rel="noopener noreferrer">
         Elena Bragado.
       </a>
     </p>
-    <p>Bienvenid@ a la lista personal de tareas.
-      Aquí puedes llevar el control de lo que más importa para ti hoy.</p>
+    <p class="personal">Bienvenid@ a tu lista personal de tareas.
+      Aquí puedes llevar el control de lo que más importa para ti hoy. 🌸</p>
 
-    <p>Puedes añadir una nueva tarea, editarla en cualquier momento o marcarla como completada cuando la termines.
-      Hagamos que todo fluya 🌸</p>
+    <p class="personal">Puedes añadir una nueva tarea, editarla en cualquier momento o marcarla como completada cuando
+      la termines.</p>
 
     <form action="task" id="task">
       <input type="text" required placeholder="Añadir tarea ...">
       <button type="submit"> + </button>
     </form>
     <div id="task-list" class="task-list"></div>
+    <br>
+
+    <br>
+    <footer class="footer">
+      <a class="github-link" href="https://github.com/RomeoElena" target="_blank" rel="noopener noreferrer">
+        <span class="github-link">Sígueme en Github</span>
+        <img src="public/github-icon.png" alt="GitHub" />
+      </a>
+      <address class="address"> Elena Bragado Romeo © 2025</address>
+    </footer>
 
   </div>
 </body>
+<script>
+  const form = document.getElementById("task");
+  const input = form.querySelector("input");
+  const taskList = document.getElementById("task-list");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const taskText = input.value.trim();
+    if (taskText === "") return;
+
+    createTaskCard(taskText);
+    input.value = "";
+  });
+
+  function createTaskCard(text) {
+    const card = document.createElement("div");
+    card.className = "task-card";
+
+    const span = document.createElement("span");
+    span.textContent = text;
+
+    const checkbox = document.createElement("button");
+    checkbox.className = "checkbox";
+    checkbox.textContent = "✓";
+    checkbox.onclick = () => {
+      span.classList.toggle("completed");
+      checkbox.textContent = span.classList.contains("completed") ? "X" : "✓";
+    };
+
+    const editBtn = document.createElement("button");
+    editBtn.textContent = "✎";
+    editBtn.onclick = () => {
+      const newText = prompt("Edit your task:", span.textContent);
+      if (newText !== null) span.textContent = newText.trim();
+    };
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "🗑";
+    deleteBtn.onclick = () => card.remove();
+
+    const modifiers = document.createElement("div");
+    modifiers.className = "modifiers";
+    modifiers.append(editBtn, deleteBtn);
+
+    const expander = document.createElement("button");
+    expander.className = "expander";
+    expander.textContent = "...";
+    expander.onclick = () => {
+      modifiers.classList.toggle("visible");
+    };
+
+    const controls = document.createElement("div");
+    controls.className = "controls";
+    controls.append(checkbox, modifiers, expander);
+
+    card.append(span, controls);
+    taskList.appendChild(card);
+  }
+</script>
 
 </html>

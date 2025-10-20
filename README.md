@@ -2,7 +2,7 @@
 
 ## 🖥️ [Ver proyecto en vivo]
 Puedes probarla directamente aquí:  
-👉 [MyDailyTasks_HTML-CSS-JS](https://romeoelena.github.io/MyDailyTasks_HTML-CSS-JS/)
+👉 [MyDailyTasks-MI lista diaria de tareas](https://romeoelena.github.io/MyDailyTasks_HTML-CSS-JS/)
 
 ---
 

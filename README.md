@@ -49,6 +49,9 @@ Este proyecto forma parte de mi desarrollo como **Front-End Developer**, y tiene
 Además, refleja mi interés por crear herramientas **útiles, bonitas y accesibles**, que faciliten la organización personal.
 
 ---
+## ✨ Vista previa
+<img src="public/TasksList.png" alt="Vista previa de la interfaz" width="500">
+---
 
 ## 👩‍💻 Autora
 

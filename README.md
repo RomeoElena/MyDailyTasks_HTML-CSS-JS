@@ -1,8 +1,8 @@
 # 🌸 My Daily Tasks — Tu lista de tareas personal 🌸
 
-## 🖥️ [Ver proyecto en vivo]
+## 🖥️ Ver proyecto en vivo
 Puedes probarla directamente aquí:  
-👉 [MyDailyTasks-MI lista diaria de tareas](https://romeoelena.github.io/MyDailyTasks_HTML-CSS-JS/)
+👉 [MyDailyTasks - Mi lista diaria de tareas](https://romeoelena.github.io/MyDailyTasks_HTML-CSS-JS/)
 
 ---
 

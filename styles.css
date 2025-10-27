@@ -12,7 +12,9 @@
 
 h1 {
   font-size: 3rem;
-  color: #f4b6c2;
+  color: #d05273;
+  border: #000000;
+  border-color: #ff69b4;
 }
 
 h2 {
@@ -188,3 +190,4 @@ footer img:hover {
   transform: scale(1.3);
   filter: invert(70%);
 }
+
